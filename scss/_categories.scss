@@ -1,0 +1,40 @@
+.categories {
+
+  .grid {
+    @include row-flex();
+    @include sm(justify-content, space-around);
+    &-block {
+      @include col();
+      @include size(3);
+      @include size-md(4);
+      @include size-sm(6);
+      @include size-xs(10);
+
+      margin-top: 75px;
+      padding: 0 30px;
+
+      @include xs(text-align,center);
+      &__img {
+        margin-bottom: 32px;
+        width: auto;
+        text-align: center;
+        img {
+          height: auto;
+          max-height: 163px;
+        }
+      }
+      &__name {
+        color: $red;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      &__price {
+        margin-top: 37px;
+        font-size: 20px;
+
+        @include sm(margin-top, 20px);
+        @include xs(text-align, center);
+      }
+    }
+  }
+}

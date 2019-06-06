@@ -1,6 +1,4 @@
 header {
-  margin-bottom: 40px;
-  @include sm(margin-bottom, 15px);
   .top-header {
     background: $dark;
     padding: 11px 0;
@@ -166,36 +164,7 @@ header {
       }
     }
   }
-  .steps {
-    justify-content: flex-start;
-    font-size: 14px;
-    @include sm(display, none);
-    li {
-      padding-right: 22px;
-      color: $dark;
-      position: relative;
-      &:last-child {
-       a {
-         pointer-events: none;
-         border-bottom: none;
-         color: $dark;
-       }
-      }
-      &:nth-child(n + 2) {
-        &:before {
-          content: '>';
-          width: 4px;
-          height: 4px;
-          position: absolute;
-          left: -15px;
-        }
-      }
-      a {
-        color: $red;
-        border-bottom: 1px solid $red;
-      }
-    }
-  }
+
   .dropdown-mobile-menu {
     width: 300px;
     box-sizing: border-box;
@@ -208,7 +177,7 @@ header {
     left: 0;
     transform: translateX(-101%);
     transition: transform .3s;
-    transition-timing-function: easy;
+    transition-timing-function: ease;
     &.active {
       transform: translateX(0);
     }

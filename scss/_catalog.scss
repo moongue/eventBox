@@ -1,0 +1,38 @@
+.catalog {
+  min-height: 630px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    .block-catalog {
+      margin-right: 60px;
+      @include xs(margin-right, 0);
+      &:first-child {
+        max-width: 320px;
+        width: 100%;
+      }
+      &:nth-child(3) {
+        max-width: 240px;
+        width: 100%;
+      }
+      ul {
+        margin-top: 20px;
+        li {
+          padding-top: 2px;
+          &:first-child {
+            margin-bottom: 20px;
+            a {
+              color: $dark;
+              font-weight: 700;
+            }
+          }
+          a {
+            color: $red;
+            text-decoration: underline;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

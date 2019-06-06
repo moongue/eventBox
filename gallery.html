@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gallery</title>
+</head>
+<body>
+
+
+<header>
+    <div class="top-header">
+        <div class="wrapper">
+            <div class="row__aic">
+                <nav>
+                    <ul class="navigation row">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Галерея</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="search-form row__aic">
+                    <input type="text" class="search-form__input" id="searchGlobal" placeholder="Поиск">
+                    <button class="search-form__button"><img src="images/search-icon.jpg" alt="Поиск"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="main-content-head row__aic">
+            <div class="mobile-menu-toggle sm-show">
+                <svg class="ham hamRotate ham-burger" viewBox="0 0 100 100" width="60"
+                     onclick="this.classList.toggle('active')">
+                    <path
+                            class="line top"
+                            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"/>
+                    <path
+                            class="line middle"
+                            d="m 30,50 h 40"/>
+                    <path
+                            class="line bottom"
+                            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                </svg>
+            </div>
+            <a href="#" class="logo-block">
+                <img src="images/logo.png" alt="Logo" class="logo-block__img">
+                <p class="logo-block__description">Аренда шатров | Оснащения мероприятий</p>
+            </a>
+            <ul class="contacts row__aic sm-hide">
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/mail-icon.png" alt="">info@boxevent.ru</a></li>
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/tel-icon.png" alt="">8-800-250-94-97</a></li>
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/alert-icon.png" alt="">Перезвоните мне</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-mobile-menu sm-show">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="contacts">
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/mail-icon.png" alt="">info@boxevent.ru</a></li>
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/tel-icon.png" alt="">8-800-250-94-97</a></li>
+                <li class="contacts-list"><a href="#" class="contacts-list__link row__aic"><img
+                        src="images/alert-icon.png" alt="">Перезвоните мне</a></li>
+            </ul>
+            <div class="search-form row__aic">
+                <input type="text" class="search-form__input" id="searchGlobal" placeholder="Поиск">
+                <button class="search-form__button"><img src="images/search-icon.jpg" alt="Поиск"></button>
+            </div>
+        </div>
+        <ul class="steps row__aic">
+            <li><a href="#">Event Box</a></li>
+            <li>Галерея мероприятия</li>
+        </ul>
+    </div>
+</header>
+
+<!--GALLERY-->
+<section class="gallery">
+    <div class="wrapper">
+        <h1>Галерея мероприятий</h1>
+        <div class="photos">
+            <div class="row__aic">
+                <p class="photos-title">Организация свадьбы 18 августа 2019 года</p>
+                <a href="#" class="photos-link">Смотреть все фото</a>
+            </div>
+            <div class="photos-block">
+                <img src="images/photo-1.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-2.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-3.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-4.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-3.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-5.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-6.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-7.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-8.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-7.jpg" alt="Свадьба" class="photos-block__img">
+            </div>
+        </div>
+
+        <div class="photos">
+            <div class="row__aic">
+                <p class="photos-title">Корпоратив для Wolkswagen Group Rus</p>
+            </div>
+            <div class="photos-block">
+                <img src="images/photo-9.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-10.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-11.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-12.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-11.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-13.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-14.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-15.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-16.jpg" alt="Свадьба" class="photos-block__img">
+                <img src="images/photo-15.jpg" alt="Свадьба" class="photos-block__img">
+            </div>
+        </div>
+
+        <div class="photos">
+            <div class="row__aic">
+                <p class="photos-title">Корпоратив для Wolkswagen Group Rus</p>
+                <a href="#" class="photos-link">Смотреть все фото</a>
+
+            </div>
+            <p class="photos-description">В рамках организации этого мероприятия мы зайдествовали 16 тентов и
+                более 300 едениц различного оборудования, чтобы мероприятие комфортно разместило на своей территории 560
+                человек</p>
+        </div>
+        <div class="photos-block">
+            <img src="images/photo-1.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-2.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-3.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-4.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-3.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-5.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-6.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-7.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-8.jpg" alt="Свадьба" class="photos-block__img">
+            <img src="images/photo-7.jpg" alt="Свадьба" class="photos-block__img">
+        </div>
+    </div>
+</section>
+<!--END GALLERY-->
+
+<footer>
+    <div class="wrapper">
+        <div class="row">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="col">
+                <p class="name">О компании</p>
+                <p>EVENT BOX - современная компания в сфере комплексного техннического обеспечения и организации
+                    мероприятий. Мы осуществляем техническую поддержку событий
+                    <a href="#">...</a></p>
+                <a href="#">Политика конфиденцильности </a>
+            </div>
+            <div class="col">
+                <p class="name">Каталог</p>
+                <ul class="navigation col">
+                    <li><a href="#">Шатры</a></li>
+                    <li><a href="#">Мебель</a></li>
+                    <li><a href="#">Климат</a></li>
+                    <li><a href="#">Сцены</a></li>
+                    <li><a href="#">Продажа шатров</a></li>
+                    <li><a href="#">Продажа оборудование</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="name">Контакты</p>
+                <ul class="col">
+                    <li>8-800-250-94-97</li>
+                    <li><a href="#">info@boxevent.ru</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

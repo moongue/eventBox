@@ -1,0 +1,226 @@
+header {
+  margin-bottom: 40px;
+  @include sm(margin-bottom, 15px);
+  .top-header {
+    background: $dark;
+    padding: 11px 0;
+    @include sm(display, none);
+  }
+  nav {
+    .navigation {
+      li {
+        margin-right: 50px;
+        @include md(margin-right, 18px);
+        a {
+          color: $white;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .search-form {
+    width: 100%;
+    max-width: 248px;
+    &__input {
+      border: none;
+      background: inherit;
+      border-bottom: 1px solid #fff;
+      width: 100%;
+      max-width: 216px;
+      color: $white;
+      font-size: 14px;
+      text-align: right;
+      &:focus {
+        &::-webkit-input-placeholder {
+          opacity: 0;
+        }
+        &::-moz-placeholder {
+          opacity: 0;
+        }
+        &:-moz-placeholder {
+          opacity: 0;
+        }
+        &:-ms-input-placeholder {
+          opacity: 0;
+        }
+      }
+      &::-webkit-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        transition: opacity .2s;
+      }
+      &::-moz-placeholder {
+        color: $white;
+        font-size: 14px;
+        transition: opacity .2s;
+      }
+      &:-moz-placeholder {
+        color: $white;
+        font-size: 14px;
+        transition: opacity .2s;
+      }
+      &:-ms-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        transition: opacity .2s;
+      }
+    }
+    &__button {
+      background: inherit;
+      border: none;
+    }
+  }
+  .main-content-head {
+    padding: 36px 0;
+    @include sm-block() {
+      padding: 0;
+    }
+    .mobile-menu-toggle {
+      //width: 40px;
+      //height: 40px;
+      box-sizing: border-box;
+      z-index: 200;
+      //HAMBURGER BUTTON
+      .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .hamRotate.active {
+        transform: rotate(45deg);
+      }
+      .hamRotate180.active {
+        transform: rotate(180deg);
+      }
+      .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: $dark;
+        stroke-width: 4;
+        stroke-linecap: round;
+      }
+      .ham-burger {
+        .top {
+          stroke-dasharray: 40 160;
+        }
+        .middle {
+          stroke-dasharray: 40 142;
+          transform-origin: 50%;
+          transition: transform 400ms;
+        }
+        .bottom {
+          stroke-dasharray: 40 85;
+          transform-origin: 50%;
+          transition: transform 400ms, stroke-dashoffset 400ms;
+        }
+        &.active {
+          .top {
+            stroke-dashoffset: -64px;
+          }
+          .middle {
+            transform: rotate(90deg);
+          }
+          .bottom {
+            stroke-dashoffset: -64px;
+          }
+        }
+      }
+      //END HAMBURGER BUTTON
+    }
+    .logo-block {
+      @include sm-block() {
+        margin-right: auto;
+        margin-left: 20px;
+      }
+      &__img {
+        width: 100%;
+        max-width: 202px;
+        height: auto;
+        @include sm(max-width, 156px)
+      }
+      &__description {
+        font-size: 12px;
+        color: $grey;
+        padding-left: 40px;
+        @include sm(padding-left, 31px);
+        @include xs(font-size, 9px);
+      }
+    }
+  }
+  .contacts {
+    &-list {
+      margin-left: 30px;
+      @include md(margin-left, 14px);
+      &__link {
+        color: $dark;
+        font-size: 14px;
+        font-weight: 500;
+        > img {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  .steps {
+    justify-content: flex-start;
+    font-size: 14px;
+    @include sm(display, none);
+    li {
+      padding-right: 22px;
+      color: $dark;
+      position: relative;
+      &:nth-child(n + 2) {
+        &:before {
+          content: '>';
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          left: -15px;
+        }
+      }
+      a {
+        color: $red;
+        border-bottom: 1px solid $red;
+      }
+    }
+  }
+  .dropdown-mobile-menu {
+    width: 300px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 322;
+    padding: 30px 15px;
+    border-radius: 0 8px 8px 0;
+    top: 60px;
+    background: $dark;
+    left: 0;
+    transform: translateX(-101%);
+    transition: transform .3s;
+    transition-timing-function: easy;
+    &.active {
+      transform: translateX(0);
+    }
+    .contacts {
+      &-list {
+        margin-bottom: 15px;
+        margin-left: 0;
+        &__link {
+          justify-content: flex-start;
+          color: $white;
+        }
+      }
+    }
+    nav {
+      .navigation {
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

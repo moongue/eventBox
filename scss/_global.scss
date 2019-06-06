@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $dark;
+  background: #fff;
+}
+.wrapper {
+  @include wrapper();
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  &__aic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__aic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+a {
+  text-decoration: none;
+}
+input[type=button], button {
+  cursor: pointer;
+  outline: none;
+
+}
+input[type=text] {
+  box-sizing: border-box;
+  &:focus, &:active {
+    outline: none;
+  }
+}
+.lg-hide {
+  @include lg(display, none);
+}
+.md-show {
+  display: none;
+  @include md(display, block);
+}
+.md-hide {
+  @include md(display, none !important);
+}
+.sm-hide {
+  @include sm(display, none);
+}
+.sm-show {
+  display: none;
+  @include sm(display, block);
+}

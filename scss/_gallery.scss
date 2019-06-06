@@ -1,0 +1,64 @@
+.gallery {
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    @include sm(text-align, center);
+  }
+  .photos {
+    margin-top: 60px;
+    font-weight: 500;
+    @include sm(margin-top, 30px);
+    > .row__aic {
+      @include sm-block() {
+        flex-direction: column;
+      }
+    }
+    &-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      @include sm-block() {
+        text-align: center;
+        font-size: 24px;
+      }
+      @include xs(font-size, 20px);
+    }
+    &-link {
+      font-size: 16px;
+      color: $dark;
+      padding-right: 26px;
+      position: relative;
+      &:after {
+        content: '';
+        background: url(../images/arrow-right.png) no-repeat;
+        width: 11px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: calc((100% - 10px) / 2);
+      }
+    }
+    &-description {
+      font-size: 14px;
+      max-width: 760px;
+      margin: 7px 0 10px;
+      font-weight: 400;
+      line-height: 1.1em;
+    }
+    &-block {
+      @include row-flex();
+      @include sm-block() {
+        justify-content: space-around;
+      }
+      &__img {
+        margin-top: 20px;
+        @include col();
+        @include size(2.4);
+        @include size-lg(3);
+        @include size-md(4);
+        @include size-sm(5);
+        @include size-xs(8);
+        @include size-xss(10)
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+footer {
+  margin-top: 110px;
+  background: $white-bg;
+  padding: 38px 0 30px;
+  .wrapper > .row {
+    @include lg(flex-wrap, wrap);
+    @include sm-block() {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .logo {
+    text-align: center;
+    @include lg-block() {
+      flex-basis: 100%;
+      margin-bottom: 25px;
+    }
+    a {
+      border-bottom: none;
+      img {
+        max-width: 75px;
+      }
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.2em;
+    @include sm(text-align, center);
+  }
+  a {
+    color: $red;
+    font-size: 14px;
+    display: inline-block;
+    border-bottom: 1px solid $red;
+    @include sm(margin, 0 auto)
+  }
+  .name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 24px;
+    @include sm(margin, 15px auto 24px);
+    + p {
+      padding-bottom: 19px;
+    }
+  }
+  .col {
+    max-width: 325px;
+    @include md(max-width, 260px)
+  }
+  .navigation {
+    @include xss-block() {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+    li {
+      @include xss(text-align, center);
+      &:nth-child(-n + 3) {
+        max-width: 80px;
+      }
+    }
+  }
+  ul {
+    height: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      max-width: 160px;
+      width: 100%;
+      font-size: 14px;
+      @include sm(margin, 0 auto);
+      a {
+        padding-top: 6px;
+      }
+    }
+  }
+}

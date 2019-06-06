@@ -3,6 +3,7 @@
     font-size: 26px;
     font-weight: 700;
     @include sm(text-align, center);
+    @include sm(font-size, 22px)
   }
   .photos {
     margin-top: 60px;
@@ -12,6 +13,16 @@
       @include sm-block() {
         flex-direction: column;
       }
+    }
+    > .row {
+      align-items: flex-start;
+      @include sm-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    h1 {
+      margin-bottom: 43px;
     }
     &-title {
       font-size: 24px;
@@ -35,6 +46,14 @@
         position: absolute;
         right: 0;
         top: calc((100% - 10px) / 2);
+      }
+      &__back {
+        padding-right: 0;
+        padding-left: 23px;
+        &:after {
+          transform: rotate(180deg);
+          left: 0;
+        }
       }
     }
     &-description {

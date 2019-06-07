@@ -1,5 +1,4 @@
 .gallery {
-
   .photos {
     margin-top: 60px;
     font-weight: 500;
@@ -41,6 +40,8 @@
         position: absolute;
         right: 0;
         top: calc((100% - 10px) / 2);
+        top: -moz-calc((100% - 10px) / 2);
+        top: -webkit-calc((100% - 10px) /2);
       }
       &__back {
         padding-right: 0;
@@ -69,9 +70,8 @@
         @include size(2.4);
         @include size-lg(3);
         @include size-md(4);
-        @include size-sm(5);
-        @include size-xs(8);
-        @include size-xss(10)
+        @include size-sm(6);
+        @include size-xss(12)
       }
     }
   }

@@ -1,5 +1,4 @@
 .categories {
-
   .grid {
     @include row-flex();
     @include sm(justify-content, space-around);
@@ -11,8 +10,6 @@
       @include size-xs(10);
 
       margin-top: 75px;
-      padding: 0 30px;
-
       @include xs(text-align,center);
       &__img {
         margin-bottom: 32px;

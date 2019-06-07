@@ -5,18 +5,21 @@ body {
   color: $dark;
   background: #fff;
 }
+
 .wrapper {
   @include wrapper();
 }
+
 .row {
   display: flex;
   justify-content: space-between;
-  &__aic{
+  &__aic {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
+
 .col {
   display: flex;
   flex-direction: column;
@@ -27,78 +30,206 @@ body {
     align-items: center;
   }
 }
+
 a {
   text-decoration: none;
 }
+
+.bold {
+  font-weight: 700;
+}
+
 input[type=button], button {
   cursor: pointer;
   outline: none;
 
 }
-input[type=text] {
+
+input {
   box-sizing: border-box;
   &:focus, &:active {
     outline: none;
+    &::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    &::-moz-placeholder {
+      opacity: 0;
+    }
+    &:-moz-placeholder {
+      opacity: 0;
+    }
+    &:-ms-input-placeholder {
+      opacity: 0;
+    }
+  }
+  &::-webkit-input-placeholder {
+    color: $white;
+    font-size: 14px;
+    transition: opacity .2s;
+  }
+  &::-moz-placeholder {
+    color: $white;
+    font-size: 14px;
+    transition: opacity .2s;
+  }
+  &:-moz-placeholder {
+    color: $white;
+    font-size: 14px;
+    transition: opacity .2s;
+  }
+  &:-ms-input-placeholder {
+    color: $white;
+    font-size: 14px;
+    transition: opacity .2s;
   }
 }
+
 .lg-hide {
   @include lg(display, none);
 }
+
 .md-show {
   display: none;
   @include md(display, block);
 }
+
 .md-hide {
   @include md(display, none !important);
 }
+
 .sm-hide {
   @include sm(display, none);
 }
+
 .sm-show {
   display: none;
   @include sm(display, block);
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
-  @include sm(text-align, center);
-  @include sm(font-size, 22px)
+  @include lg(font-size, 32px);
+  @include sm-block() {
+    text-align: center;
+  }
+}
+
+.btn-styles {
+  width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: $red;
+  border-radius: 6px;
+  font-size: 18px;
+  color: $white;
+  @include xs(width, 100%);
+}
+
+.input-styles {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $red;
+  background: none;
+  padding: 13px 8px;
+  margin-top: 30px;
+  &::-webkit-input-placeholder {
+    color: $grey2;
+    font-size: 18px;
+    transition: opacity .2s;
+  }
+  &::-moz-placeholder {
+    color: $grey2;
+    font-size: 18px;
+    transition: opacity .2s;
+  }
+  &:-moz-placeholder {
+    color: $grey2;
+    font-size: 18px;
+    transition: opacity .2s;
+  }
+  &:-ms-input-placeholder {
+    color: $grey2;
+    font-size: 18px;
+    transition: opacity .2s;
+  }
+}
+
+.subtitle {
+  padding-bottom: 18px;
+  margin-top: 97px;
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  &:before {
+    content: '';
+    width: 78px;
+    height: 4px;
+    background: $red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 //TABS
 .tabs {
   margin-top: 24px;
   justify-content: flex-start;
-  border-bottom: 3px solid #e4e4e4;
   max-width: 787px;
   margin-bottom: 55px;
-  @include sm-block() {
-    flex-direction: column;
-    align-items: flex-start;
+  @include md-block() {
+    flex-wrap: wrap;
+  }
+  @include xs-block() {
+    justify-content: space-between;
   }
   .one-tab {
     font-weight: 500;
-    margin-right: 100px;
+    padding-right: 100px;
+    margin-bottom: 25px;
     padding-bottom: 7px;
-    @include md(margin-right, 70px);
-    @include sm(margin-bottom, 20px);
+    border-bottom: 3px solid #e4e4e4;
+    white-space: nowrap;
+    @include xs-block() {
+      padding-right: 0;
+    }
+    &:nth-child(-n + 3) {
+      @include xs(flex-basis, 33.334%)
+    }
+    &:nth-child(n + 4) {
+      @include xs(flex-basis, 50%)
+    }
     &:last-child {
-      margin-right: 0;
+      padding-right: 0;
+      &.active:before {
+        width: 100%;
+      }
     }
     &.active {
       position: relative;
       &:before {
         content: '';
-        width: 100%;
+        width: calc(100% - 100px);
+        width: -webkit-calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
         height: 3px;
         background: $red;
         position: absolute;
         bottom: -3px;
+        @include xs-block() {
+          width: calc(100% - 50px);
+          width: -webkit-calc(100% - 50px);
+          width: -moz-calc(100% - 50px);
+        }
       }
     }
   }
 }
+
 //END TABS
 
 //STEPS
@@ -133,4 +264,5 @@ h1 {
     }
   }
 }
+
 //END STEPS

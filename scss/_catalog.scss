@@ -6,7 +6,7 @@
     margin-top: 15px;
     .block-catalog {
       margin-right: 60px;
-      @include xs(margin-right, 0);
+      @include xss(margin-right, 0);
       &:first-child {
         max-width: 320px;
         width: 100%;
@@ -30,6 +30,11 @@
             color: $red;
             text-decoration: underline;
             font-size: 14px;
+
+            @include sm-block() {
+              line-height: 1.8;
+              padding: 5px 0;
+            }
           }
         }
       }

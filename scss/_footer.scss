@@ -2,6 +2,7 @@ footer {
   margin-top: 110px;
   background: $white-bg;
   padding: 38px 0 30px;
+  @include sm(margin-top, 60px);
   .wrapper > .row {
     @include sm-block() {
       flex-wrap: wrap;

@@ -58,6 +58,7 @@
     padding: 50px 0;
     background: #fcfcfc;
     font-size: 24px;
+    @include sm(margin-top, 35px);
      .row__aic {
       @include xs-block() {
         flex-direction: column;

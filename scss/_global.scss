@@ -126,6 +126,11 @@ h1 {
   border-radius: 6px;
   font-size: 18px;
   color: $white;
+  transition: all .2s ease;
+  &:hover {
+    transform: scale(1.1);
+    background: #E72D3D;
+  }
   @include xs(width, 100%);
 }
 
@@ -136,6 +141,7 @@ h1 {
   background: none;
   padding: 13px 8px;
   margin-top: 30px;
+  font-size: 16px;
   &::-webkit-input-placeholder {
     color: $grey2;
     font-size: 18px;
@@ -181,11 +187,9 @@ h1 {
   justify-content: flex-start;
   max-width: 787px;
   margin-bottom: 55px;
-  @include md-block() {
-    flex-wrap: wrap;
-  }
+
   @include xs-block() {
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .one-tab {
     font-weight: 500;
@@ -194,22 +198,19 @@ h1 {
     padding-bottom: 7px;
     border-bottom: 3px solid #e4e4e4;
     white-space: nowrap;
-    @include xs-block() {
-      padding-right: 0;
+    cursor: pointer;
+    @include md-block() {
+      padding-right: 80px;
     }
-    &:nth-child(-n + 3) {
-      @include xs(flex-basis, 33.334%)
-    }
-    &:nth-child(n + 4) {
-      @include xs(flex-basis, 50%)
-    }
+    @include sm(padding-right, 40px);
     &:last-child {
       padding-right: 0;
       &.active:before {
         width: 100%;
       }
     }
-    &.active {
+
+    &.choose, &.active  {
       position: relative;
       &:before {
         content: '';

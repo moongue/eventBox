@@ -14,6 +14,10 @@ header {
           color: $white;
           font-size: 14px;
           white-space: nowrap;
+          transition: color .2s ease;
+          &:hover {
+            color: #e4e4e4;
+          }
         }
       }
     }
@@ -124,6 +128,10 @@ header {
         color: $dark;
         font-size: 14px;
         font-weight: 500;
+        transition: transform .2s ease;
+        &:hover {
+          transform: translateY(-2px);
+        }
         > img {
           padding-right: 10px;
         }
